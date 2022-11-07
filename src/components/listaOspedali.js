@@ -1,4 +1,5 @@
 import React from "react";
+import Ospedali from "./ospedali";
 
 const ospedali = [
     {Nome: "S1", Regione: "Sardegna", Città: "Cagliari", numero: 1234, esami: ["ES1", "ES2"]},
@@ -9,7 +10,10 @@ const ospedali = [
 function ListaOspedali(){
     return(
         <div className="mt-4">
-            Lista ospedali
+            { ospedali.map(ospedali => {
+                return <Ospedali datiOspedali={ospedali}/>
+            })
+            }
         </div>
     )
 };
