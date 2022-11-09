@@ -1,15 +1,13 @@
 # ESAMIGRAM
 
-Webapp FullStack per aggiunta nuove strutture ospedaliere ed esami che svolgono;
+Webapp FullStack, permette di aggiungere strutture ospedaliere e ricercare le stesse in base agli esami che svolgono.
 
 
 **Descrizione**
 
 
 Frontend intuitivo per l'aggiunta di una nuova struttura;
-LA searchbar filtra durante la compilazione le strutture che eseguono l'esame desiderato
-Si dovrebbe integrare direttamente tramite il backend per non dover caricare tutte le strutture ogni volta, ma data la situazione attuale e il tempo molto limitato questa funzione non è ancora stata integrata.
-
+La searchbar filtra durante la compilazione le strutture che eseguono l'esame desiderato
 
 Le Strutture ospedaliere sono rappresentate da oggetti con le seguenti caratteristiche:
 
