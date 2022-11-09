@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Container, Form, Button, FormLabel, FormControl } from "react-bootstrap";
 
@@ -55,6 +56,12 @@ function AddForm( { setOspedali, ospedali }) {
     const handleSubmit = e => {
         e.preventDefault();
         setOspedali([...ospedali, struttura]);
+        axios.post('http://localhost:3333/strutture', struttura)
+            .then( res => {
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     /*handleAddExam: funzione con lo scopo di aumentare la length degli esami di 1 e quindi

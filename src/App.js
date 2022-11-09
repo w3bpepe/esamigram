@@ -1,18 +1,27 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import './App.css';
 
 
 import AddForm from './components/add/form';
 import ListaOspedali from './components/listaOspedali';
 import Searchbar from './components/searchbar';
+import axios from 'axios';
 
-/*ospedali: Lista degli ospedali, da sostituire con db */
-const ospedali = [
-]
+
 
 function App() {
   /* stato a top level per accedere e modificare le strutture */
-  const [hospitals, setHospitals] = useState(ospedali);
+  const [hospitals, setHospitals] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3333/strutture', {})
+      .then( res => {
+        setHospitals(res.data);
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },[hospitals])
 
   return (
     <div className="App text-center">

@@ -17,15 +17,25 @@ server.get('/', (req, res) => {
 server.get('/strutture', async (req, res) => {
     //GET STRUTTURE
     try{
-        const strutture = db('strutture');
+        const strutture = await db('strutture');
         res.json(strutture);
     } catch(err){
         console.log(err);
     }
 })
 
-server.post('/strutture', (req, res) => {
+server.post('/strutture', async (req, res) => {
     //POST A STRUCTURE
+    const struttura  = req.body;
+    if(!struttura){
+        return res.status(400).json({message:'inserisci la struttura'});
+    }
+    try{
+        await db('strutture').insert(struttura);
+        res.status(201).json({message: 'struttura aggiunta'})
+    }catch(err){
+        console.log(err);
+    }
 })
 
 

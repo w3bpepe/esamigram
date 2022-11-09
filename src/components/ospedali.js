@@ -9,9 +9,7 @@ function Ospedali(props){
             <div className="card-body text-dark">
                 <h5 className="card-title">{props.datiOspedali.Regione}, {props.datiOspedali.Città}</h5>
                 <p className="card-text">{props.datiOspedali.numero}</p>
-                {props.datiOspedali.esami.map(esame => {
-                    return <p className="card-text">{esame}</p>
-                })}
+                <p className="card-text">{props.datiOspedali.esami}</p>
             </div>
         </div>
 
