@@ -33,6 +33,8 @@ L'aggiornamento dei dati non è stato integrato ne nel frontend ne nel backend (
 
 ## HOW TO USE
 
+Dopo aver installato le dependencies:
+
 Nella cartella src/server/ avviare nodemon tramite **npm run start** per avviare il server (localhost:3333)
 
 Nella cartella generale avviare la webapp tramite **npm start**
