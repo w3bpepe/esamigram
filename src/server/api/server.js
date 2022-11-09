@@ -45,8 +45,14 @@ server.put('/strutture', (req, res) => {
     //UPDATE A STRUCTURE
 })
 
-server.delete('/strutture', (req, res) => {
-    //DELETE A STRUCTURE
+server.delete('/strutture', async (req, res) => {
+    //DELETE ALL STRUCTURES, FUNZIONALE PER RIPULIRE DB E RIPOPOLARE DURANTE LE PROVE
+    try{
+        await db('strutture').del();
+        res.status(201).json({message: 'strutture eliminate'})
+    }catch(err){
+        console.log(err);
+    }
 })
 
 module.exports = server;

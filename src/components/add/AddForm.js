@@ -62,6 +62,14 @@ function AddForm( { setOspedali, ospedali }) {
             .catch(err => {
                 console.log(err);
             })
+        setStruttura({
+            Nome: '',
+            Regione: '',
+            Città: '',
+            numero: '',
+            esami: ['']
+        });
+        setEsami(['']);
     }
 
     /*handleAddExam: funzione con lo scopo di aumentare la length degli esami di 1 e quindi
