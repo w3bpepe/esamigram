@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server for esamigram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3bpepe/esamigram.git"
+  },
+  "keywords": [
+    "esamigram"
+  ],
+  "author": "tullio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w3bpepe/esamigram/issues"
+  },
+  "homepage": "https://github.com/w3bpepe/esamigram#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "knex": "^2.3.0",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
